@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Philip Beadle — Building the operating system for the energy transformation',
+  description = 'Founder of AgenticScale.ai. Co-founder of AgenticGrid Foundation. Seven years on the Holochain core team. AI-powered simulations that let every stakeholder in the energy transformation work together.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://philipbeadle.life/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="min-h-screen bg-ink-900 text-bone-100">
+    <slot />
+  </body>
+</html>

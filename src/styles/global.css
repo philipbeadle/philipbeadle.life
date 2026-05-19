@@ -1,0 +1,75 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/space-grotesk';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-ink-900 text-bone-100 antialiased;
+    font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  body {
+    @apply bg-ink-900 text-bone-100 selection:bg-mint selection:text-ink-900;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 {
+    font-family: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+    font-feature-settings: 'ss02';
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1FE9A8;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono uppercase text-[11px] tracking-widest text-bone-400;
+  }
+  .chapter-marker {
+    @apply font-display text-[6rem] leading-none text-ink-500 select-none;
+  }
+  .display-h1 {
+    @apply font-display text-5xl sm:text-6xl md:text-7xl leading-[1.02] tracking-tight text-bone-50;
+  }
+  .display-h2 {
+    @apply font-display text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight text-bone-50;
+  }
+  .display-h3 {
+    @apply font-display text-2xl sm:text-3xl leading-tight tracking-tight text-bone-50;
+  }
+  .body-lg {
+    @apply text-base sm:text-lg leading-relaxed text-bone-300;
+  }
+  .body {
+    @apply text-base leading-relaxed text-bone-300;
+  }
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full bg-mint text-ink-900 px-5 py-2.5 font-mono text-xs uppercase tracking-widest hover:bg-mint-400 transition-colors;
+  }
+  .pill-outline {
+    @apply inline-flex items-center gap-2 rounded-full border border-bone-400/40 text-bone-100 px-5 py-2.5 font-mono text-xs uppercase tracking-widest hover:border-mint hover:text-mint transition-colors;
+  }
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-bone-400/20 to-transparent;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}

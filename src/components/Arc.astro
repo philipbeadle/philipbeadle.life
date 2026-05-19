@@ -1,0 +1,51 @@
+---
+const stages = [
+  {
+    period: '2018 — 2025',
+    title: 'Holochain core',
+    body: 'Seven years inside the protocol — building RAD tools and hApps at Holochain.org and Holo.host. Agent-centric thinking became muscle memory.',
+  },
+  {
+    period: '2022',
+    title: 'IOEN.tech',
+    body: 'Internet of Energy Network. First crossover of Holochain thinking and grid modelling — community-driven energy markets on agent-centric infrastructure.',
+  },
+  {
+    period: '2023 — now',
+    title: 'AgenticGrid',
+    body: 'Agent-based simulation of the Australian electricity grid. Unity3D plus generative AI. Currently a RACE for 2030 project at Monash University.',
+  },
+  {
+    period: 'Next',
+    title: 'AgenticGrid Foundation',
+    body: 'Co-founding with Arthur Brock. A sovereign, agent-centric network for federated grid simulation — every Australian zone substation, every plausible 2030 scenario, owned by the commons.',
+  },
+];
+---
+<section id="arc" class="relative border-t border-bone-400/10 py-28 sm:py-36">
+  <div class="mx-auto max-w-wide px-6 sm:px-10">
+    <div class="flex items-start justify-between gap-12">
+      <div class="max-w-narrow">
+        <p class="eyebrow">The Arc · 01</p>
+        <h2 class="display-h2 mt-6">
+          Every step has been pointing here.
+        </h2>
+        <p class="body-lg mt-8">
+          The work I've shipped over the last seven years is one continuous thesis: that the next generation of critical infrastructure runs on agent-centric protocols, that the cognitive capital of running it belongs to the people who build it, and that AI is finally the right interface to make it usable. AgenticGrid is what that thesis looks like in production.
+        </p>
+      </div>
+      <div class="chapter-marker hidden lg:block">01</div>
+    </div>
+
+    <ol class="mt-20 grid gap-px overflow-hidden rounded-2xl border border-bone-400/10 bg-bone-400/10 sm:grid-cols-2 lg:grid-cols-4">
+      {stages.map((stage, i) => (
+        <li class="relative bg-ink-900 p-8 transition-colors hover:bg-ink-800">
+          <span class="font-mono text-[11px] uppercase tracking-widest text-mint">{String(i + 1).padStart(2, '0')}</span>
+          <p class="mt-6 font-mono text-xs uppercase tracking-widest text-bone-400">{stage.period}</p>
+          <h3 class="display-h3 mt-2 text-xl sm:text-2xl">{stage.title}</h3>
+          <p class="body mt-4 text-sm">{stage.body}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

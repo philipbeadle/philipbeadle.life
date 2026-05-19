@@ -1,0 +1,75 @@
+---
+const projects = [
+  {
+    label: 'Current',
+    title: 'AgenticGrid',
+    summary: 'Agent-based simulation of the Australian electricity grid. Unity3D + generative AI. RACE for 2030 project at Monash University; Broken Hill pilot; Phase 2 scoping for a national network twin.',
+    meta: 'AgenticScale.ai · 2023 — now',
+    link: 'https://www.racefor2030.com.au/project/agenticgrid-ai-breaking-the-barriers-with-ai-assisted-energy-modelling/',
+    linkLabel: 'RACE for 2030 project page',
+  },
+  {
+    label: 'Foundation',
+    title: 'AgenticGrid Foundation',
+    summary: 'Sovereign, agent-centric network for federated grid simulation. Co-founding with Arthur Brock. Public DNAs on Holochain, hosted on Holo, ledgered via Unyt. The commons layer beneath the commercial platform.',
+    meta: 'Forthcoming',
+    link: null,
+    linkLabel: null,
+  },
+  {
+    label: 'Past',
+    title: 'IOEN.tech',
+    summary: 'Internet of Energy Network. Community-driven network enabling connection and value exchange between any energy device, user, or market — on Holochain.',
+    meta: 'Founding contributor · 2022',
+    link: 'https://ioen.tech',
+    linkLabel: 'ioen.tech',
+  },
+  {
+    label: 'Past',
+    title: 'Holochain · Holo',
+    summary: 'Seven years on the core team. RAD tooling and hApp development. The protocol that makes sovereign agent-centric applications practical.',
+    meta: 'Core team · 2018 — ~2025',
+    link: 'https://www.holochain.org',
+    linkLabel: 'holochain.org',
+  },
+];
+---
+<section id="work" class="relative border-t border-bone-400/10 py-28 sm:py-36">
+  <div class="mx-auto max-w-wide px-6 sm:px-10">
+    <div class="flex items-start justify-between gap-12">
+      <div class="max-w-narrow">
+        <p class="eyebrow">The Work · 03</p>
+        <h2 class="display-h2 mt-6">
+          What I'm building, and what got me here.
+        </h2>
+      </div>
+      <div class="chapter-marker hidden lg:block">03</div>
+    </div>
+
+    <div class="mt-16 divide-y divide-bone-400/10 border-y border-bone-400/10">
+      {projects.map((project) => (
+        <article class="grid gap-6 py-10 lg:grid-cols-[10rem_1fr_auto] lg:items-baseline lg:gap-12">
+          <p class="font-mono text-[11px] uppercase tracking-widest text-mint">{project.label}</p>
+          <div>
+            <h3 class="display-h3">{project.title}</h3>
+            <p class="body mt-4 max-w-narrow">{project.summary}</p>
+          </div>
+          <div class="font-mono text-[11px] uppercase tracking-widest text-bone-400 lg:text-right">
+            <p>{project.meta}</p>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener"
+                class="mt-2 inline-flex items-center gap-2 text-bone-100 hover:text-mint"
+              >
+                {project.linkLabel}
+                <span aria-hidden>↗</span>
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
