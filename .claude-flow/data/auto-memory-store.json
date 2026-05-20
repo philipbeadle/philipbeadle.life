@@ -1,0 +1,14 @@
+[
+  {
+    "id": "task-task_1779167348343_do4ns5",
+    "key": "task_1779167348343_do4ns5",
+    "content": "Task completed: task_1779167348343_do4ns5",
+    "namespace": "tasks",
+    "type": "task-outcome",
+    "metadata": {
+      "success": true,
+      "quality": 0.85
+    },
+    "createdAt": 1779167348495
+  }
+]

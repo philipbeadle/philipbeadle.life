@@ -6,7 +6,7 @@ interface Props {
 }
 const {
   title = 'Philip Beadle — Building the operating system for the energy transformation',
-  description = 'Founder of AgenticScale.ai. Co-founder of AgenticGrid Foundation. Seven years on the Holochain core team. AI-powered simulations that let every stakeholder in the energy transformation work together.',
+  description = 'Founder of AgenticScale.ai and its AgenticGrid.ai platform. Co-founder of AgenticGrid Foundation. Five years on the Holochain core team. AI-powered simulations that let every stakeholder in the energy transformation work together.',
 } = Astro.props;
 ---
 <!doctype html>
@@ -27,5 +27,41 @@ const {
   </head>
   <body class="min-h-screen bg-ink-900 text-bone-100">
     <slot />
+    <script is:inline>
+      (() => {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('in');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { rootMargin: '0px 0px -8% 0px', threshold: 0.12 }
+        );
+
+        const reveal = (el) => {
+          if (reduce) {
+            el.classList.add('in');
+            return;
+          }
+          io.observe(el);
+        };
+
+        // Single elements
+        document.querySelectorAll('[data-reveal]').forEach(reveal);
+
+        // Staggered groups — direct children animate in sequence
+        document.querySelectorAll('[data-reveal-stagger]').forEach((group) => {
+          Array.from(group.children).forEach((child, i) => {
+            child.classList.add('reveal');
+            child.style.transitionDelay = Math.min(i * 90, 540) + 'ms';
+            reveal(child);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
