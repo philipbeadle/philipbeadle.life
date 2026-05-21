@@ -10,5 +10,29 @@
       "quality": 0.85
     },
     "createdAt": 1779167348495
+  },
+  {
+    "id": "task-task_1779257049566_9yjc3w",
+    "key": "task_1779257049566_9yjc3w",
+    "content": "Task completed: task_1779257049566_9yjc3w",
+    "namespace": "tasks",
+    "type": "task-outcome",
+    "metadata": {
+      "success": true,
+      "quality": 0.85
+    },
+    "createdAt": 1779257049715
+  },
+  {
+    "id": "task-task_1779327073773_69ckwz",
+    "key": "task_1779327073773_69ckwz",
+    "content": "Task completed: task_1779327073773_69ckwz",
+    "namespace": "tasks",
+    "type": "task-outcome",
+    "metadata": {
+      "success": true,
+      "quality": 0.85
+    },
+    "createdAt": 1779327073956
   }
 ]
