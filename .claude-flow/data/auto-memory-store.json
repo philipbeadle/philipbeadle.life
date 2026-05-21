@@ -34,5 +34,17 @@
       "quality": 0.85
     },
     "createdAt": 1779327073956
+  },
+  {
+    "id": "task-task_1779327275250_db00hf",
+    "key": "task_1779327275250_db00hf",
+    "content": "Task completed: task_1779327275250_db00hf",
+    "namespace": "tasks",
+    "type": "task-outcome",
+    "metadata": {
+      "success": true,
+      "quality": 0.85
+    },
+    "createdAt": 1779327275405
   }
 ]
