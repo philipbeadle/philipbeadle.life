@@ -46,5 +46,29 @@
       "quality": 0.85
     },
     "createdAt": 1779327275405
+  },
+  {
+    "id": "task-task_1779327496243_beicjg",
+    "key": "task_1779327496243_beicjg",
+    "content": "Task completed: task_1779327496243_beicjg",
+    "namespace": "tasks",
+    "type": "task-outcome",
+    "metadata": {
+      "success": true,
+      "quality": 0.85
+    },
+    "createdAt": 1779327496403
+  },
+  {
+    "id": "task-task_1779328336444_jr9ulu",
+    "key": "task_1779328336444_jr9ulu",
+    "content": "Task completed: task_1779328336444_jr9ulu",
+    "namespace": "tasks",
+    "type": "task-outcome",
+    "metadata": {
+      "success": true,
+      "quality": 0.85
+    },
+    "createdAt": 1779328336637
   }
 ]
